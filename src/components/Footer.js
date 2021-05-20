@@ -24,24 +24,38 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footerMenu">
-        <div className="contacts">
-          {contacts.map((contact) => (
-            <div className="contact">
-              <div className="icon">
-                <FontAwesomeIcon icon={contact.icon} className="fa" />
-              </div>
-              <a
-                className="contact-url"
-                href={contact.isWebPage ? "https://" + contact.url : null}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {contact.url}
-              </a>
-            </div>
-          ))}
-        </div>
+        <Contacts contacts={contacts} />
       </div>
+    </div>
+  );
+}
+
+function Contacts(props) {
+  const { contacts } = props;
+  return (
+    <div className="contacts">
+      {contacts.map((contact) => (
+        <Contact contact={contact} key={contact.url} />
+      ))}
+    </div>
+  );
+}
+
+function Contact(props) {
+  const { contact } = props;
+  return (
+    <div className="contact">
+      <div className="icon">
+        <FontAwesomeIcon icon={contact.icon} className="fa" />
+      </div>
+      <a
+        className="contact-url"
+        href={contact.isWebPage ? "https://" + contact.url : null}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {contact.url}
+      </a>
     </div>
   );
 }
