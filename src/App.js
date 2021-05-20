@@ -1,5 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./components/Footer";
+
+import logo from "./logo.svg";
+
+import "./components/FontAwesomeIcon";
+import "./App.css";
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Footer />
     </div>
   );
 }
