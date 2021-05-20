@@ -22,7 +22,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="Footer">
+    <div className="footer">
       <div className="footerMenu">
         <div className="contacts">
           {contacts.map((contact) => (
@@ -34,6 +34,7 @@ export default function Footer() {
                 className="contact-url"
                 href={contact.isWebPage ? "https://" + contact.url : null}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {contact.url}
               </a>
