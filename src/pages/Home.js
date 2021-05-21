@@ -2,9 +2,10 @@ import "./Home.css";
 
 import pic1 from "../assets/home/imgbin_doraemon-animation-png.png";
 import pic2 from "../assets/home/toppng.com-computer-science-png-women-symbol-in-science-813x708.png";
+
 function Home() {
 	return (
-		<div className="home">
+		<div className="home-container">
 			<HomeCard1 parity="0" />
 			<HomeCard2 parity="1" />
 		</div>
