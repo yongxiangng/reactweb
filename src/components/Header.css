@@ -5,7 +5,7 @@
 }
 
 .header {
-  width: 80%;
+  width: min(80%, 1440px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
