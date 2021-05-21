@@ -1,14 +1,15 @@
-.header-container {
-    width: min(80%, 1440px);
+.about-container {
     display: flex;
     flex-direction: column;
 }
 
-.header {
-    width: min(80%, 1440px);
+.about-content {
+    margin: auto;
 }
 
-.about-content {
-    width: 80%;
-    text-justify: auto;
+.about-content-text {
+    width: 90%;
+    margin: auto;
+    margin-left: 5%;
+    font-size: 20px;
 }
