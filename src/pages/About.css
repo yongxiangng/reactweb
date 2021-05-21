@@ -1,0 +1,14 @@
+.header-container {
+    width: min(80%, 1440px);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: min(80%, 1440px);
+}
+
+.about-content {
+    width: 80%;
+    text-justify: auto;
+}
