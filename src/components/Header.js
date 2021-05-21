@@ -2,23 +2,25 @@ import "./Header.css";
 
 import logo from "../assets/logo.svg";
 
+import { Link } from "react-router-dom";
+
 export default function Header() {
   const buttons = [
     {
       name: "Home",
-      href: "#",
+      link: "/",
     },
     {
       name: "About",
-      href: "#",
+      link: "/about",
     },
     {
       name: "Projects",
-      href: "#",
+      link: "/projects",
     },
     {
       name: "Awards",
-      href: "#",
+      link: "/awards",
     },
   ];
 
@@ -34,9 +36,9 @@ export default function Header() {
 
 function Logo() {
   return (
-    <a href="#" className="logo">
+    <Link to="/" className="logo">
       <img src={logo} alt="Logo"></img>
-    </a>
+    </Link>
   );
 }
 
@@ -55,9 +57,9 @@ function Button(props) {
   const { button } = props;
   return (
     <div className="button">
-      <a className="button-text" href={button.href}>
+      <Link to={button.link} className="button-text">
         {button.name}
-      </a>
+      </Link>
     </div>
   );
 }
