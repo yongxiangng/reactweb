@@ -1,0 +1,10 @@
+.page-header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-header-text {
+  font-size: 36px;
+  margin-left: 5%;
+  width: 100%;
+}

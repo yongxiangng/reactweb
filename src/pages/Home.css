@@ -1,8 +1,6 @@
-.home {
-  width: min(80%, 1440px);
+.home-container {
   display: flex;
   flex-direction: column;
-  margin: auto;
 }
 
 .home-card {
@@ -10,17 +8,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
 }
 
 .home-content-container {
-	display: flex;
-	width: 50%;
+  display: flex;
+  width: 40%;
 }
 
 .home-content {
-	margin-left: 20%;
-  width: 360px;
   text-align: left;
   font-size: 20px;
   line-height: 36px;
@@ -35,19 +30,17 @@
 }
 
 .picture-container0 {
-  width: 50%;
+  width: 40%;
   text-align: right;
   display: block;
-	margin: auto;
-	margin-right: 10%;
+  margin: auto;
 }
 
 .picture-container1 {
-  width: 50%;
+  width: 40%;
   text-align: left;
   display: block;
-	margin: auto;
-	margin-left: 10%;
+  margin: auto;
 }
 
 .picture {
