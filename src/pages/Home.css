@@ -4,24 +4,26 @@
 }
 
 .home-card {
-  height: 750px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .home-content-container {
   display: flex;
-  width: 40%;
+  width: 35%;
 }
 
 .home-content {
+  height: 600px;
   text-align: left;
   font-size: 20px;
   line-height: 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 5%;
+  margin-right: 15% ;
 }
 
 .name {
@@ -31,16 +33,15 @@
 
 .picture-container0 {
   width: 40%;
-  text-align: right;
-  display: block;
-  margin: auto;
+  text-align: center;
+  margin: auto 0px;
+  margin-right: 5%;
 }
 
 .picture-container1 {
   width: 40%;
   text-align: left;
-  display: block;
-  margin: auto;
+  margin: auto 0px;
 }
 
 .picture {

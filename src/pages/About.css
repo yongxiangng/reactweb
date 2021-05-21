@@ -1,10 +1,11 @@
 .about-container {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
 }
 
 .about-content {
-  margin: auto;
+  margin: 10vh auto;
 }
 
 .about-content-text {
