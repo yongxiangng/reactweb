@@ -45,21 +45,21 @@ function Logo() {
 function NavigationBar(props) {
   const { buttons } = props;
   return (
-    <div className="nav-bar">
+    <ol className="nav-bar">
       {buttons.map((button) => (
         <Button button={button} key={button.name} />
       ))}
-    </div>
+    </ol>
   );
 }
 
 function Button(props) {
   const { button } = props;
   return (
-    <div className="button">
+    <li className="button">
       <Link to={button.link} className="button-text">
         {button.name}
       </Link>
-    </div>
+    </li>
   );
 }

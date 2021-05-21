@@ -1,0 +1,49 @@
+.home {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+	margin: auto;
+}
+
+.home-card {
+  height: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.home-content0 {
+  width: 360px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-content1 {
+  width: 360px;
+  text-align: right;
+  font-size: 20px;
+  line-height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 36px;
+  margin: 15px 0px;
+}
+
+.picture0 {
+  margin: 150px;
+  margin-right: 200px;
+}
+
+.picture1 {
+  margin: 150px;
+  margin-left: 200px;
+}
