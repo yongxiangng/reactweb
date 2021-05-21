@@ -1,0 +1,55 @@
+.home {
+  width: min(80%, 1440px);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.home-card {
+  height: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.home-content-container {
+	display: flex;
+	width: 50%;
+}
+
+.home-content {
+	margin-left: 20%;
+  width: 360px;
+  text-align: left;
+  font-size: 20px;
+  line-height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 36px;
+  margin: 15px 0px;
+}
+
+.picture-container0 {
+  width: 50%;
+  text-align: right;
+  display: block;
+	margin: auto;
+	margin-right: 10%;
+}
+
+.picture-container1 {
+  width: 50%;
+  text-align: left;
+  display: block;
+	margin: auto;
+	margin-left: 10%;
+}
+
+.picture {
+  width: 50%;
+}

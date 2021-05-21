@@ -5,7 +5,7 @@
 }
 
 .header {
-  width: 1440px;
+  width: min(80%, 1440px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,13 +18,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 12px;
 }
 
 .nav-bar {
   display: flex;
   flex-direction: row;
   margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .button {
@@ -37,9 +38,7 @@
 }
 
 .button-text {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
+  text-align: left;
   font-size: 24px;
   line-height: 36px;
   text-decoration: none;
