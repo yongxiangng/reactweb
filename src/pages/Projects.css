@@ -57,7 +57,6 @@
 }
 
 .project-buttons {
-  min-width: 250px;
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -65,6 +64,7 @@
 }
 
 .project-button {
+  min-width: 200px;
   text-align: center;
   width: 50%;
   height: 35px;

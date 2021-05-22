@@ -20,12 +20,8 @@ function Projects() {
 }
 
 function ProjectCard(props) {
-  const project = props.project;
-
-  const title = project.title; // try to use object destructuring here
-  const abstract = project.abstract;
-  const code = project.code;
-  const deployment = project.deployment;
+  const { project } = props;
+  const { title, abstract, code, deployment } = project;
 
   function toUrl(title) {
     return title.toLowerCase().replace(/\s/g, "-");
@@ -39,12 +35,10 @@ function ProjectCard(props) {
             {title}
           </Link>
         </h2>
-
         <div className="project-abstract">
           <p>{abstract}</p>
         </div>
       </div>
-
       <div className="project-buttons">
         <Button name="View Code" link={code} />
         <Button name="View Demo" link={deployment} />
@@ -54,8 +48,7 @@ function ProjectCard(props) {
 }
 
 function Button(props) {
-  const name = props.name;
-  const link = props.link;
+  const { name, link } = props;
   return (
     <a
       href={link}

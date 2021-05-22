@@ -1,7 +1,7 @@
 import "./PageHeader.css";
 
 export default function PageHeader(props) {
-  const name = props.name;
+  const { name } = props;
   return (
     <div className="page-header">
       <h1 className="page-header-text">

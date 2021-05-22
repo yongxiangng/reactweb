@@ -6,8 +6,12 @@ const projects = require("../database/projects.json");
 
 export default function Project(props) {
   const { match } = props;
-  const id = match.params.id;
-  let project = undefined;
+  const { params } = match;
+  const { id } = params;
+  let project = {
+      title: "404 Error! Page not found :<",
+      description: ""
+    };
 
   function toID(name) {
     return name.toLowerCase().replace(/\s/g, "-");

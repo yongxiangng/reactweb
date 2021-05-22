@@ -15,7 +15,7 @@ function Home() {
 // chose to hard code to prevent use of innerHTML, anyways my Home Page doesn't change often
 
 function HomeCard1(props) {
-  const parity = props.parity;
+  const { parity } = props;
   return (
     <div className="home-card">
       <div className="home-content-container">
@@ -39,7 +39,7 @@ function HomeCard1(props) {
 }
 
 function HomeCard2(props) {
-  const parity = props.parity;
+  const { parity } = props;
   return (
     <div className="home-card">
       <div
