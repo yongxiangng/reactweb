@@ -1,6 +1,7 @@
 .home-container {
   display: flex;
   flex-direction: column;
+  min-height: 80vh;
 }
 
 .home-card {
@@ -23,7 +24,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 5%;
-  margin-right: 15% ;
+  margin-right: 15%;
 }
 
 .name {

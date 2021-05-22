@@ -4,9 +4,9 @@ export default function PageHeader(props) {
   const name = props.name;
   return (
     <div className="page-header">
-      <p className="page-header-text">
+      <h1 className="page-header-text">
         <strong>{name}</strong>
-      </p>
+      </h1>
     </div>
   );
 }

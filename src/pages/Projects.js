@@ -1,29 +1,70 @@
+import "./Projects.css";
+
 import PageHeader from "../components/PageHeader";
+
+import { Link } from "react-router-dom";
+
+const projects = require("../database/projects.json");
 
 function Projects() {
   return (
-    <div className="about-container">
-      <div className="about-header">
-        <PageHeader name="About Me" />
+    <div className="projects-container">
+      <PageHeader name="Projects" />
+      <ol className="projects-list">
+        {projects.map((project, index) => (
+          <ProjectCard project={project} key={index} />
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function ProjectCard(props) {
+  const project = props.project;
+
+  const title = project.title; // try to use object destructuring here
+  const abstract = project.abstract;
+  const code = project.code;
+  const deployment = project.deployment;
+
+  function toUrl(title) {
+    return title.toLowerCase().replace(/\s/g, "-");
+  }
+
+  return (
+    <div className="project-card">
+      <div className="project-info">
+        <h2 className="project-title">
+          <Link to={`/projects/${toUrl(title)}`} className="project-title-text">
+            {title}
+          </Link>
+        </h2>
+
+        <div className="project-abstract">
+          <p>{abstract}</p>
+        </div>
       </div>
-      <div className="about-content">
-        <p className="about-content-text">
-          {`Graduated from NUS High in 2019, I started 
-          to pursue my degree at NUS in 2020 as a Computer Science 
-          and Business Administration Double Degree student to further 
-          my interest in Computer Science and Finance.`}
-          <br />
-          <br />
 
-          {`I have been working on a few projects. Do check them out 
-          under the projects tab!`}
-          <br />
-          <br />
-
-          {`Thanks for reading this :3`}
-        </p>
+      <div className="project-buttons">
+        <Button name="View Code" link={code} />
+        <Button name="View Demo" link={deployment} />
       </div>
     </div>
+  );
+}
+
+function Button(props) {
+  const name = props.name;
+  const link = props.link;
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="project-button-text"
+    >
+      <div className="project-button">{name}</div>
+    </a>
   );
 }
 

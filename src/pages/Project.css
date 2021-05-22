@@ -1,0 +1,13 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.project-description {
+  width: 90%;
+  margin: 0px auto;
+
+  font-size: 20px;
+  line-height: 30px;
+}

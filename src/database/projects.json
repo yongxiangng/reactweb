@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Source Academy",
+    "abstract": "Contributed to the developement of source academy.",
+    "description": "Turned 2D mono-colored curves to 3D multi-colored curves.",
+    "code": "https://github.com/source-academy/cadet-frontend",
+    "deployment": "https://source-academy.github.io/playground"
+  },
+  {
+    "title": "Personal Webpage",
+    "abstract": "Personal webpage built with React and Django.",
+    "description": "Front-end built with React, backend built with Django.",
+    "code": "https://github.com/yongxiangng/reactweb",
+    "deployment": "https://github.com/yongxiangng/reactweb"
+  }
+]
