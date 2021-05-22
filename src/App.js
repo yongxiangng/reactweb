@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Project from "./pages/Project"
+import Project from "./pages/Project";
 import Awards from "./pages/Awards";
 
 import "./components/FontAwesomeIcon";

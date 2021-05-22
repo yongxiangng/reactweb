@@ -4,7 +4,7 @@ import PageHeader from "../components/PageHeader";
 
 import { Link } from "react-router-dom";
 
-const projects = require("../database/projects.json")
+const projects = require("../database/projects.json");
 
 function Projects() {
   return (
@@ -28,14 +28,16 @@ function ProjectCard(props) {
   const deployment = project.deployment;
 
   function toUrl(title) {
-    return title.toLowerCase().replace(/\s/g, '-')
+    return title.toLowerCase().replace(/\s/g, "-");
   }
 
   return (
     <div className="project-card">
       <div className="project-info">
         <h2 className="project-title">
-          <Link to={`/projects/${toUrl(title)}`} className="project-title-text">{title}</Link>
+          <Link to={`/projects/${toUrl(title)}`} className="project-title-text">
+            {title}
+          </Link>
         </h2>
 
         <div className="project-abstract">

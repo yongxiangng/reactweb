@@ -67,16 +67,19 @@
 .project-button {
   text-align: center;
   width: 50%;
-  height: 30px;
+  height: 35px;
   margin: 2% auto;
 
   background: #c8dafe;
   border-radius: 5px;
 
-  line-height: 30px;
+  line-height: 35px;
 }
 
 .project-button-text {
   color: #000000;
   text-decoration: none;
+  
+  font-size: 20px;
+  line-height: 30px;
 }
