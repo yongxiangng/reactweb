@@ -1,30 +1,65 @@
+import "./Projects.css"
+
 import PageHeader from "../components/PageHeader";
 
 function Projects() {
+  const projects = [
+    {
+      title: "Source Academy",
+      abstract: "Contributed to the developement of source academy.",
+      description: "Turned 2D mono-colored curves to 3D multi-colored curves.",
+      code: "https://github.com/source-academy/cadet-frontend",
+      deployment: "https://source-academy.github.io/playground"
+    }
+  ]
   return (
-    <div className="about-container">
-      <div className="about-header">
-        <PageHeader name="About Me" />
-      </div>
-      <div className="about-content">
-        <p className="about-content-text">
-          {`Graduated from NUS High in 2019, I started 
-          to pursue my degree at NUS in 2020 as a Computer Science 
-          and Business Administration Double Degree student to further 
-          my interest in Computer Science and Finance.`}
-          <br />
-          <br />
-
-          {`I have been working on a few projects. Do check them out 
-          under the projects tab!`}
-          <br />
-          <br />
-
-          {`Thanks for reading this :3`}
-        </p>
-      </div>
+    <div className="projects-container">
+      <PageHeader name="Projects" />
+      <ol className="projects-list">
+        {projects.map((project, index ) => (
+          <ProjectCard project={project} key={index} />
+        ))}
+      </ol>
     </div>
   );
+}
+
+function ProjectCard(props) {
+  const project = props.project;
+  const title = project.title; // try to use object destructuring here
+  const abstract = project.abstract;
+  const code = project.code;
+  const deployment = project.deployment;
+  return (
+    <div className="project-card">
+      <div className="project-info">
+        <div className="project-title">
+          <strong>{title} </strong>
+        </div>
+
+        <div className="project-abstract">
+          <p>{abstract}</p>
+        </div>
+      </div>
+      
+      <div className="project-buttons">
+        <Button name="View Code" link={code}/>
+        <Button name="View Demo" link={deployment}/>
+      </div>
+    </div>
+  )
+}
+
+function Button(props) {
+  const name = props.name;
+  const link = props.link
+  return (
+    <a href={link} target="_blank" rel="noreferrer" className="project-button-text">
+      <div className="project-button">
+          {name}
+      </div>
+    </a>
+  )
 }
 
 export default Projects;
