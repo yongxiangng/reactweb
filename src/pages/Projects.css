@@ -9,7 +9,7 @@
   width: 100%;
   height: 240px;
   margin: 3% auto;
-  
+
   background-color: rgba(205, 202, 202, 0.4);
   border-radius: 9px;
   display: flex;
@@ -31,10 +31,15 @@
   line-height: 42px;
   display: flex;
   align-items: center;
-  
+
   color: #000000;
   height: 20%;
   margin: 10px 0px;
+}
+
+.project-title-text {
+  text-decoration: none;
+  color: #000000;
 }
 
 .project-abstract {
@@ -65,9 +70,9 @@
   height: 30px;
   margin: 2% auto;
 
-  background: #C8DAFE;
+  background: #c8dafe;
   border-radius: 5px;
-  
+
   line-height: 30px;
 }
 
