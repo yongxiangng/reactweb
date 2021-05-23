@@ -7,17 +7,16 @@ import PageHeader from "../components/PageHeader";
 import { Link } from "react-router-dom";
 
 function Projects() {
-
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     async function getProjects() {
-      const response = await fetch('http://localhost:8000/api/projects/');
+      const response = await fetch("http://localhost:8000/api/projects/");
       const data = await response.json();
-      setProjects(data)
+      setProjects(data);
     }
     getProjects();
-  }, [])
+  }, []);
 
   return (
     <div className="projects-container">

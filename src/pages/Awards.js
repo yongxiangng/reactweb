@@ -1,10 +1,21 @@
 import "./Awards.css";
 
+import { useState, useEffect } from "react";
+
 import PageHeader from "../components/PageHeader";
 
-const awards = require("../database/awards.json");
-
 function Awards() {
+  const [awards, setAwards] = useState([]);
+
+  useEffect(() => {
+    async function getAwards() {
+      const response = await fetch("http://localhost:8000/api/awards/");
+      const data = await response.json();
+      setAwards(data);
+    }
+    getAwards();
+  }, []);
+
   return (
     <div className="awards-container">
       <PageHeader name="Awards" />
