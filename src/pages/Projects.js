@@ -1,12 +1,24 @@
 import "./Projects.css";
 
+import { useState, useEffect } from "react";
+
 import PageHeader from "../components/PageHeader";
 
 import { Link } from "react-router-dom";
 
-const projects = require("../database/projects.json");
-
 function Projects() {
+
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    async function getProjects() {
+      const response = await fetch('http://localhost:8000/api/projects/');
+      const data = await response.json();
+      setProjects(data)
+    }
+    getProjects();
+  }, [])
+
   return (
     <div className="projects-container">
       <PageHeader name="Projects" />
