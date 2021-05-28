@@ -1,8 +1,8 @@
-import "./Awards.css";
+import styles from "./Awards.module.css";
 
 import { useState, useEffect } from "react";
 
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../../components/PageHeader";
 
 function Awards() {
   const [awards, setAwards] = useState([]);
@@ -17,9 +17,9 @@ function Awards() {
   }, []);
 
   return (
-    <div className="awards-container">
+    <div className={styles.container}>
       <PageHeader name="Awards" />
-      <ol className="awards-list">
+      <ol>
         {awards.map((award, index) => (
           <AwardCard award={award} key={index} />
         ))}
@@ -33,12 +33,12 @@ function AwardCard(props) {
   const { title, date, description } = award;
 
   return (
-    <div className="award-card">
-      <div className="award-card-header">
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
         <h2>{title}</h2>
         <h2>{date}</h2>
       </div>
-      <div className="award-card-description">
+      <div className={styles.cardDescription}>
         <p>{description}</p>
       </div>
     </div>

@@ -1,8 +1,8 @@
-import "./Project.css";
+import styles from "./Project.module.css";
 
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../../components/PageHeader";
 
-const projects = require("../database/projects.json");
+const projects = require("../../database/projects.json");
 
 export default function Project(props) {
   const { match } = props;
@@ -11,7 +11,7 @@ export default function Project(props) {
   let project = {
     title: "404 Error! Page not found :<",
     description: "",
-  };
+  }
 
   function toID(name) {
     return name.toLowerCase().replace(/\s/g, "-");
@@ -25,9 +25,9 @@ export default function Project(props) {
   }
 
   return (
-    <div className="project-container">
+    <div className={styles.container}>
       <PageHeader name={project.title} />
-      <div className="project-description">{project.description}</div>
+      <div className={styles.description}>{project.description}</div>
     </div>
   );
 }

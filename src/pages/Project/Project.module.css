@@ -1,10 +1,10 @@
-.project-container {
+.container {
   display: flex;
   flex-direction: column;
   min-height: 80vh;
 }
 
-.project-description {
+.description {
   width: 90%;
   margin: 0px auto;
 

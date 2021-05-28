@@ -1,8 +1,8 @@
-import "./Projects.css";
+import styles from "./Projects.module.css";
 
 import { useState, useEffect } from "react";
 
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../../components/PageHeader";
 
 import { Link } from "react-router-dom";
 
@@ -19,9 +19,9 @@ function Projects() {
   }, []);
 
   return (
-    <div className="projects-container">
+    <div className={styles.container}>
       <PageHeader name="Projects" />
-      <ol className="projects-list">
+      <ol>
         {projects.map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}
@@ -39,18 +39,18 @@ function ProjectCard(props) {
   }
 
   return (
-    <div className="project-card">
-      <div className="project-info">
-        <h2 className="project-title">
-          <Link to={`/projects/${toUrl(title)}`} className="project-title-text">
+    <div className={styles.card}>
+      <div className={styles.info}>
+        <h2 className={styles.title}>
+          <Link to={`/projects/${toUrl(title)}`} className={styles.titleText}>
             {title}
           </Link>
         </h2>
-        <div className="project-abstract">
+        <div className={styles.abstract}>
           <p>{abstract}</p>
         </div>
       </div>
-      <div className="project-buttons">
+      <div className={styles.buttons}>
         <Button name="View Code" link={code} />
         <Button name="View Demo" link={deployment} />
       </div>
@@ -65,9 +65,9 @@ function Button(props) {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="project-button-text"
+      className={styles.buttonText}
     >
-      <div className="project-button">{name}</div>
+      <div className={styles.button}>{name}</div>
     </a>
   );
 }

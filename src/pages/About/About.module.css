@@ -1,14 +1,14 @@
-.about-container {
+.container {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
 }
 
-.about-content {
+.content {
   margin: 10vh auto;
 }
 
-.about-content-text {
+.contentText {
   width: 90%;
   margin: auto;
   margin-left: 5%;
