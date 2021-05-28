@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   const contacts = [
@@ -22,8 +22,8 @@ export default function Footer() {
   ];
 
   return (
-    <div className="footer">
-      <div className="footerMenu">
+    <div className={styles.footer}>
+      <div className={styles.footerMenu}>
         <Contacts contacts={contacts} />
       </div>
     </div>
@@ -33,7 +33,7 @@ export default function Footer() {
 function Contacts(props) {
   const { contacts } = props;
   return (
-    <div className="contacts">
+    <div className={styles.contacts}>
       {contacts.map((contact) => (
         <Contact contact={contact} key={contact.url} />
       ))}
@@ -44,12 +44,12 @@ function Contacts(props) {
 function Contact(props) {
   const { contact } = props;
   return (
-    <div className="contact">
+    <div className={styles.contact}>
       <div className="icon">
-        <FontAwesomeIcon icon={contact.icon} className="fa" />
+        <FontAwesomeIcon icon={contact.icon} className={styles.fa} />
       </div>
       <a
-        className="contact-url"
+        className={styles.contactUrl}
         href={contact.isWebPage ? "https://" + contact.url : null}
         target="_blank"
         rel="noopener noreferrer"

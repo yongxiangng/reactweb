@@ -1,6 +1,6 @@
-import "./Header.css";
+import styles from "./Header.module.css";
 
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
 import { Link } from "react-router-dom";
 
@@ -25,8 +25,8 @@ export default function Header() {
   ];
 
   return (
-    <div className="header-container">
-      <div className="header">
+    <div className={styles.container}>
+      <div className={styles.header}>
         <Logo />
         <NavigationBar buttons={buttons} />
       </div>
@@ -36,7 +36,7 @@ export default function Header() {
 
 function Logo() {
   return (
-    <Link to="/" className="logo">
+    <Link to="/" className={styles.logo}>
       <img src={logo} alt="Logo"></img>
     </Link>
   );
@@ -45,7 +45,7 @@ function Logo() {
 function NavigationBar(props) {
   const { buttons } = props;
   return (
-    <ol className="nav-bar">
+    <ol className={styles.navigationBar}>
       {buttons.map((button) => (
         <Button button={button} key={button.name} />
       ))}
@@ -56,8 +56,8 @@ function NavigationBar(props) {
 function Button(props) {
   const { button } = props;
   return (
-    <li className="button">
-      <Link to={button.link} className="button-text">
+    <li className={styles.button}>
+      <Link to={button.link} className={styles.buttonText}>
         {button.name}
       </Link>
     </li>

@@ -1,2 +1,2 @@
-import Projects from "./Projects.js"
+import Projects from "./Projects.js";
 export default Projects;

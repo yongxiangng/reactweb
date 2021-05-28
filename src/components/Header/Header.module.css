@@ -1,4 +1,4 @@
-.header-container {
+.container {
   min-height: 20vh;
   display: flex;
   flex-direction: row;
@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.nav-bar {
+.navigationBar {
   display: flex;
   flex-direction: row;
   margin-right: 20px;
@@ -39,7 +39,7 @@
   align-content: flex-start;
 }
 
-.button-text {
+.buttonText {
   text-align: left;
   font-size: 24px;
   line-height: 36px;
