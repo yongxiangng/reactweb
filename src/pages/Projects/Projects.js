@@ -3,6 +3,7 @@ import styles from "./Projects.module.css";
 import { useState, useEffect } from "react";
 
 import PageHeader from "../../components/PageHeader";
+import Card from "../../components/Card";
 
 import { Link } from "react-router-dom";
 
@@ -21,7 +22,7 @@ function Projects() {
   return (
     <div className={styles.container}>
       <PageHeader name="Projects" />
-      <ol>
+      <ol className="flex flex-col items-center">
         {projects.map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}
@@ -39,8 +40,8 @@ function ProjectCard(props) {
   }
 
   return (
-    <div className={styles.card}>
-      <div className={styles.info}>
+    <Card>
+      <div className="flex flex-col justify-center ml-10 lg:w-3/4 w-full">
         <h2 className={styles.title}>
           <Link to={`/projects/${toUrl(title)}`} className={styles.titleText}>
             {title}
@@ -54,20 +55,15 @@ function ProjectCard(props) {
         <Button name="View Code" link={code} />
         <Button name="View Demo" link={deployment} />
       </div>
-    </div>
+    </Card>
   );
 }
 
 function Button(props) {
   const { name, link } = props;
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noreferrer"
-      className={styles.buttonText}
-    >
-      <div className={styles.button}>{name}</div>
+    <a href={link} target="_blank" rel="noreferrer" className={styles.button}>
+      <div className={styles.buttonText}>{name}</div>
     </a>
   );
 }

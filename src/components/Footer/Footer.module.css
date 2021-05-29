@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   background: #feecc8;
+  min-width: 100vw;
 }
 
 .footerMenu {

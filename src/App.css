@@ -1,4 +1,5 @@
 .App {
+  min-width: 100vw;
   background: #fdfdfd;
   font-family: Poppins;
   font-style: normal;
@@ -11,6 +12,7 @@
 }
 
 .app-container {
+  min-height: 82vh;
   margin: auto;
   width: min(80%, 1440px);
   display: flex;

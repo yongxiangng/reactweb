@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
+      <div className="flex flex-row max-w-screen-xl w-full justify-between lg:items-center items-start">
         <Logo />
         <NavigationBar />
       </div>

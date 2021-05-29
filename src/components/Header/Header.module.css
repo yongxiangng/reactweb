@@ -1,18 +1,19 @@
 .container {
-  padding-top: 2vh;
   min-height: 18vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.header {
+.navigationBar {
   width: min(80%, 1440px);
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
   background-color: #fdfdfd;
 }
 
@@ -21,28 +22,4 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.navigationBar {
-  display: flex;
-  flex-direction: row;
-  margin-right: 20px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.button {
-  height: 107px;
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.buttonText {
-  text-align: center;
-  font-size: 24px;
-  line-height: 36px;
-  text-decoration: none;
-  color: #000000;
 }
