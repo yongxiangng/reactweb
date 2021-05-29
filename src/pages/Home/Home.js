@@ -17,7 +17,7 @@ function Home() {
 function HomeCard1() {
   return (
     <div className="my-8 lg:my-52 flex flex-col lg:flex lg:flex-row lg:justify-around">
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center lg:w-2/5">
         <p className="my-8">
           Hello I am
           <br />
@@ -29,7 +29,11 @@ function HomeCard1() {
         </p>
       </div>
       <div className="flex flex-row justify-center lg:w-2/5">
-        <img src={pic1} alt="Home page" className="lg:w-1/2 p-10"></img>
+        <img
+          src={pic1}
+          alt="Home page"
+          className="max-w-xs lg:max-w-none lg:w-1/2 p-10 lg:p-0"
+        ></img>
       </div>
     </div>
   );
@@ -39,9 +43,13 @@ function HomeCard2() {
   return (
     <div className="my-8 lg:my-52 flex flex-col-reverse lg:flex lg:flex-row lg:justify-around">
       <div className="flex flex-row justify-center lg:w-2/5">
-        <img src={pic2} alt="Home page" className="lg:w-1/2 p-10 lg:p-0"></img>
+        <img
+          src={pic2}
+          alt="Home page"
+          className="max-w-xs lg:max-w-none lg:w-1/2 p-10 lg:p-0"
+        ></img>
       </div>
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center lg:w-2/5">
         <p className="my-8">
           The purpose of the website is for me to consolidate all my projects
           and deploy them. I really don't know what else to write here.
