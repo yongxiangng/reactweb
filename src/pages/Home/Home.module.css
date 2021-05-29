@@ -2,49 +2,10 @@
   display: flex;
   flex-direction: column;
   min-height: 80vh;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.contentContainer {
-  display: flex;
-  width: 35%;
-}
-
-.content {
-  height: 600px;
-  text-align: left;
-  font-size: 20px;
-  line-height: 36px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin-left: 5%;
-  margin-right: 15%;
 }
 
 .name {
   font-size: 36px;
   margin: 15px 0px;
-}
-
-.pictureContainer0 {
-  width: 40%;
-  text-align: center;
-  margin: auto 0px;
-  margin-right: 5%;
-}
-
-.pictureContainer1 {
-  width: 40%;
-  text-align: left;
-  margin: auto 0px;
-}
-
-.picture {
-  width: 50%;
 }

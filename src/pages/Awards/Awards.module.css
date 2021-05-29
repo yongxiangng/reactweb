@@ -21,15 +21,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 85%;
-  margin: 0 auto;
-  margin-top: 10px;
+  font-size: 20px;
 }
 
 .cardDescription {
   height: 40%;
-  width: 85%;
-  margin: 0 auto;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
 }

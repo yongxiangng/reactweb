@@ -3,6 +3,7 @@ import styles from "./Awards.module.css";
 import { useState, useEffect } from "react";
 
 import PageHeader from "../../components/PageHeader";
+import Card from "../../components/Card";
 
 function Awards() {
   const [awards, setAwards] = useState([]);
@@ -19,7 +20,7 @@ function Awards() {
   return (
     <div className={styles.container}>
       <PageHeader name="Awards" />
-      <ol>
+      <ol className="flex flex-col items-center">
         {awards.map((award, index) => (
           <AwardCard award={award} key={index} />
         ))}
@@ -33,15 +34,19 @@ function AwardCard(props) {
   const { title, date, description } = award;
 
   return (
-    <div className={styles.card}>
+    <Card isRow={false}>
       <div className={styles.cardHeader}>
-        <h2>{title}</h2>
-        <h2>{date}</h2>
+        <h1>
+          <strong>{title}</strong>
+        </h1>
+        <h2>
+          <strong>{date}</strong>
+        </h2>
       </div>
       <div className={styles.cardDescription}>
         <p>{description}</p>
       </div>
-    </div>
+    </Card>
   );
 }
 

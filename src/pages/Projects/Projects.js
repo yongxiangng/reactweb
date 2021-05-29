@@ -40,8 +40,8 @@ function ProjectCard(props) {
   }
 
   return (
-    <Card>
-      <div className="flex flex-col justify-center ml-10 lg:w-3/4 w-full">
+    <Card isRow={true}>
+      <div className="flex flex-col justify-center lg:w-1/2 w-full">
         <h2 className={styles.title}>
           <Link to={`/projects/${toUrl(title)}`} className={styles.titleText}>
             {title}
