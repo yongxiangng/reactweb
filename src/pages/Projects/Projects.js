@@ -1,4 +1,4 @@
-import styles from "./Projects.module.css";
+import "./Projects.less";
 
 import { useState, useEffect } from "react";
 
@@ -21,7 +21,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <PageHeader name="Projects" />
       <ol className="flex flex-col items-center">
         {projects.map((project, index) => (
@@ -43,34 +43,25 @@ function ProjectCard(props) {
   return (
     <Card isRow={true}>
       <div className="flex flex-col justify-center lg:w-1/2 w-full">
-        <h2 className={styles.title}>
-          <Link to={`/projects/${toUrl(title)}`} className={styles.titleText}>
+        <h2 className={"title"}>
+          <Link to={`/projects/${toUrl(title)}`} className={"titleText"}>
             {title}
           </Link>
         </h2>
-        <div className={styles.abstract}>
+        <div className={"abstract"}>
           <p>{abstract}</p>
         </div>
       </div>
-      <div className={styles.buttons}>
-        <Button type="primary" href={code}>
+      <div className={"buttons"}>
+        <Button type="primary" href={code} style={{ color: "black", margin: "5px", font: "Poppins" }} >
           View Code
         </Button>
-        <Button type="primary" href={deployment}>
+        <Button type="primary" href={deployment} style={{ color: "black", margin: "5px" }} >
           View Demo
         </Button>
       </div>
     </Card>
   );
 }
-
-// function MyButton(props) {
-//   const { name, link } = props;
-//   return (
-//     <a href={link} target="_blank" rel="noreferrer" className={styles.button}>
-//       <div className={styles.buttonText}>{name}</div>
-//     </a>
-//   );
-// }
 
 export default Projects;
