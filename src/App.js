@@ -9,6 +9,7 @@ import Awards from "./pages/Awards";
 
 import "./components/FontAwesomeIcon";
 import "./App.css";
+import "antd/dist/antd.less";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 

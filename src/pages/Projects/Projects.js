@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import PageHeader from "../../components/PageHeader";
 import Card from "../../components/Card";
 
+import { Button } from "antd";
 import { Link } from "react-router-dom";
 
 function Projects() {
@@ -52,20 +53,24 @@ function ProjectCard(props) {
         </div>
       </div>
       <div className={styles.buttons}>
-        <Button name="View Code" link={code} />
-        <Button name="View Demo" link={deployment} />
+        <Button type="primary" href={code}>
+          View Code
+        </Button>
+        <Button type="primary" href={deployment}>
+          View Demo
+        </Button>
       </div>
     </Card>
   );
 }
 
-function Button(props) {
-  const { name, link } = props;
-  return (
-    <a href={link} target="_blank" rel="noreferrer" className={styles.button}>
-      <div className={styles.buttonText}>{name}</div>
-    </a>
-  );
-}
+// function MyButton(props) {
+//   const { name, link } = props;
+//   return (
+//     <a href={link} target="_blank" rel="noreferrer" className={styles.button}>
+//       <div className={styles.buttonText}>{name}</div>
+//     </a>
+//   );
+// }
 
 export default Projects;
