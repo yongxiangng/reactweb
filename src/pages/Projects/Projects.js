@@ -53,10 +53,18 @@ function ProjectCard(props) {
         </div>
       </div>
       <div className={"buttons"}>
-        <Button type="primary" href={code} style={{ color: "black", margin: "5px", font: "Poppins" }} >
+        <Button
+          type="primary"
+          href={code}
+          style={{ color: "black", margin: "5px", font: "Poppins" }}
+        >
           View Code
         </Button>
-        <Button type="primary" href={deployment} style={{ color: "black", margin: "5px" }} >
+        <Button
+          type="primary"
+          href={deployment}
+          style={{ color: "black", margin: "5px" }}
+        >
           View Demo
         </Button>
       </div>
