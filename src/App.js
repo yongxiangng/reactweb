@@ -1,6 +1,3 @@
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -82,8 +79,9 @@ function App() {
             </Menu>
           </div>
         </Header>
-        <div className="App">
-          <Content>
+        <div style={{height:"64px"}} />
+        <Content >
+          <div className="App">
             <div className="app-container">
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -93,8 +91,8 @@ function App() {
                 <Route exact path="/awards" component={Awards} />
               </Switch>
             </div>
-          </Content>
-        </div>
+          </div>
+        </Content>
         <Footer
           style={{
             width: "100%",

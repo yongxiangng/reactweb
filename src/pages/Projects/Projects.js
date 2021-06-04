@@ -3,10 +3,9 @@ import "./Projects.less";
 import { useState, useEffect } from "react";
 
 import PageHeader from "../../components/PageHeader";
-import Card from "../../components/Card";
 
 import { Button } from "antd";
-import { Link } from "react-router-dom";
+import { Space, Card } from "antd";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
@@ -23,52 +22,36 @@ function Projects() {
   return (
     <div className="container">
       <PageHeader name="Projects" />
-      <ol className="flex flex-col items-center">
-        {projects.map((project, index) => (
-          <ProjectCard project={project} key={index} />
+      <Space direction="vertical" align="center">
+        {projects.map((project) => (
+          <Card title={project.title} style={{ width: 900 }}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>{project.abstract}</p>
+              <div className={"buttons"} style={{ width: "25%" }}>
+                <Button
+                  type="primary"
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "black", margin: "5px" }}
+                >
+                  View Code
+                </Button>
+                <Button
+                  type="primary"
+                  href={project.deployment}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "black", margin: "5px" }}
+                >
+                  View Demo
+                </Button>
+              </div>
+            </div>
+          </Card>
         ))}
-      </ol>
+      </Space>
     </div>
-  );
-}
-
-function ProjectCard(props) {
-  const { project } = props;
-  const { title, abstract, code, deployment } = project;
-
-  function toUrl(title) {
-    return title.toLowerCase().replace(/\s/g, "-");
-  }
-
-  return (
-    <Card isRow={true}>
-      <div className="flex flex-col justify-center lg:w-1/2 w-full">
-        <h2 className={"title"}>
-          <Link to={`/projects/${toUrl(title)}`} className={"titleText"}>
-            {title}
-          </Link>
-        </h2>
-        <div className={"abstract"}>
-          <p>{abstract}</p>
-        </div>
-      </div>
-      <div className={"buttons"}>
-        <Button
-          type="primary"
-          href={code}
-          style={{ color: "black", margin: "5px", font: "Poppins" }}
-        >
-          View Code
-        </Button>
-        <Button
-          type="primary"
-          href={deployment}
-          style={{ color: "black", margin: "5px" }}
-        >
-          View Demo
-        </Button>
-      </div>
-    </Card>
   );
 }
 
