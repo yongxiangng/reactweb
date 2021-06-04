@@ -1,13 +1,16 @@
 import "./Projects.less";
 
 import { useState, useEffect } from "react";
-
-import PageHeader from "../../components/PageHeader";
+import { Link } from "react-router-dom";
 
 import { Button } from "antd";
-import { Space, Card } from "antd";
+import { Space, Card, PageHeader } from "antd";
 
 function Projects() {
+  function toUrl(title) {
+    return title.toLowerCase().replace(/\s/g, "-");
+  }
+
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -20,14 +23,25 @@ function Projects() {
   }, []);
 
   return (
-    <div className="container">
-      <PageHeader name="Projects" />
+    <>
+      <PageHeader className="site-page-header" title="Projects" />
       <Space direction="vertical" align="center">
-        {projects.map((project) => (
-          <Card title={project.title} style={{ width: 900 }}>
+        {projects.map((project, key) => (
+          <Card
+            title={
+              <Link
+                to={`/projects/${toUrl(project.title)}`}
+                className={"titleText"}
+              >
+                {project.title}
+              </Link>
+            }
+            style={{ maxWidth: 1200, width: "90vw" }}
+            key={key}
+          >
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <p>{project.abstract}</p>
-              <div className={"buttons"} style={{ width: "25%" }}>
+              <div className={"buttons"} style={{ width: "20%" }}>
                 <Button
                   type="primary"
                   href={project.code}
@@ -51,7 +65,7 @@ function Projects() {
           </Card>
         ))}
       </Space>
-    </div>
+    </>
   );
 }
 

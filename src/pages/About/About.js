@@ -1,14 +1,11 @@
-import PageHeader from "../../components/PageHeader";
-
+import { PageHeader } from "antd";
 import styles from "./About.module.css";
 
 function About() {
   return (
-    <div className={styles.container}>
-      <div>
-        <PageHeader name="About Me" />
-      </div>
-      <div className={styles.content}>
+    <>
+      <PageHeader className="site-page-header" title="About Me" />
+      <div className={styles.container}>
         <p className={styles.contentText}>
           {`Graduated from NUS High in 2019, I started 
           to pursue my degree at NUS in 2020 as a Computer Science 
@@ -25,7 +22,7 @@ function About() {
           {`Thanks for reading this :3`}
         </p>
       </div>
-    </div>
+    </>
   );
 }
 

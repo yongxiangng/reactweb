@@ -79,8 +79,8 @@ function App() {
             </Menu>
           </div>
         </Header>
-        <div style={{height:"64px"}} />
-        <Content >
+        <div style={{ height: "64px" }} />
+        <Content>
           <div className="App">
             <div className="app-container">
               <Switch>

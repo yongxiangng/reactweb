@@ -2,7 +2,7 @@ import styles from "./Project.module.css";
 
 import { useState, useEffect } from "react";
 
-import PageHeader from "../../components/PageHeader";
+import { PageHeader } from "antd";
 
 export default function Project(props) {
   const [projects, setProjects] = useState([]);
@@ -37,8 +37,12 @@ export default function Project(props) {
 
   return (
     <div className={styles.container}>
-      <PageHeader name={project.title} />
-      <div className={styles.description}>{project.description}</div>
+      <PageHeader
+        className="site-page-header"
+        onBack={() => window.history.back()}
+        title={project.title}
+      />
+      <p>{project.description}</p>
     </div>
   );
 }
