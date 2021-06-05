@@ -12,12 +12,21 @@ import logo from "./assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Layout, Menu } from "antd";
+import { Layout, Drawer, Button } from "antd";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 const { Header, Content, Footer } = Layout;
 
 function App() {
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
   const contacts = [
     {
       icon: ["fab", "github"],
@@ -54,32 +63,62 @@ function App() {
                 <img src={logo} alt="Logo"></img>
               </Link>
             </div>
-            <Menu
-              theme="dark"
-              mode="horizontal"
-              defaultSelectedKeys={["1"]}
-              style={{ float: "right" }}
+            <div className="hidden lg:flex flex-row justify-end gap-x-10">
+              <p>
+                <Link to="/" className="text-white">
+                  Home
+                </Link>
+              </p>
+              <p>
+                <Link to="/about" className="text-white">
+                  About
+                </Link>
+              </p>
+              <p>
+                <Link to="/projects" className="text-white">
+                  Projects
+                </Link>
+              </p>
+              <p>
+                <Link to="/awards" className="text-white">
+                  Awards
+                </Link>
+              </p>
+            </div>
+          </div>
+
+          <div className="lg:hidden">
+            <Button
+              type="primary"
+              onClick={showDrawer}
+              style={{ color: "black" }}
             >
-              <Menu.Item key="1">
-                <Link to="/" />
-                Home
-              </Menu.Item>
-              <Menu.Item key="2">
-                <Link to="/about" />
-                About
-              </Menu.Item>
-              <Menu.Item key="3">
-                <Link to="/projects" />
-                Projects
-              </Menu.Item>
-              <Menu.Item key="4">
-                <Link to="/awards" />
-                Awards
-              </Menu.Item>
-            </Menu>
+              Menu
+            </Button>
+            <Drawer
+              title="Menu"
+              placement="right"
+              closable={false}
+              onClose={onClose}
+              visible={visible}
+            >
+              <p>
+                <Link to="/">Home</Link>
+              </p>
+              <p>
+                <Link to="/about">About</Link>
+              </p>
+              <p>
+                <Link to="/projects">Projects</Link>
+              </p>
+              <p>
+                <Link to="/awards">Awards</Link>
+              </p>
+            </Drawer>
           </div>
         </Header>
-        <div style={{ height: "64px" }} />
+
+        <div style={{ height: "64px", background: "#fdfdfd" }} />
         <Content>
           <div className="App">
             <div className="app-container">
