@@ -59,7 +59,7 @@ function Home() {
       </div>
 
       <div className="block sm:hidden">
-        <Col className="gutter-row" span={24} style={{ height: "35vh" }}>
+        <Col className="gutter-row" span={24} style={{ height: "30vh" }}>
           <p className="my-28">
             Hello I am
             <br />
@@ -71,28 +71,29 @@ function Home() {
           </p>
         </Col>
 
-        <Col className="gutter-row" span={24} align="middle" style={{ height: "35vh" }}>
-          <img
-            src={pic1}
-            alt="Home page"
-            // className="max-w-xs lg:max-w-none lg:w-1/2 p-10 lg:p-0"
-            className="w-1/2"
-          ></img>
+        <Col
+          className="gutter-row"
+          span={24}
+          align="middle"
+          style={{ height: "35vh" }}
+        >
+          <img src={pic1} alt="Home page" className="h-full"></img>
         </Col>
 
-        <Col className="gutter-row" style={{ height: "35vh" }}>
+        <Col className="gutter-row" style={{ height: "30vh" }}>
           <p className="my-28">
             The purpose of the website is for me to consolidate all my projects
             and deploy them. I really don't know what else to write here.
           </p>
         </Col>
 
-        <Col className="gutter-row" span={24} align="middle" style={{ height: "35vh" }}>
-          <img
-            src={pic2}
-            alt="Home page"
-            className="max-w-xs lg:max-w-none lg:w-1/2 p-10 lg:p-0"
-          ></img>
+        <Col
+          className="gutter-row"
+          span={24}
+          align="middle"
+          style={{ height: "35vh" }}
+        >
+          <img src={pic2} alt="Home page" className="h-full"></img>
         </Col>
       </div>
     </>
