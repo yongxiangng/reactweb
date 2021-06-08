@@ -21,7 +21,7 @@ function Awards() {
         {awards.map((award, key) => (
           <Card
             title={award.title}
-            style={{ maxWidth: 1200, width: "90vw" }}
+            style={{ maxWidth: 1150, width: "90vw" }}
             key={key}
           >
             <p>{award.description}</p>

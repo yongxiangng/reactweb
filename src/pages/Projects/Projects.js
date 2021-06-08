@@ -36,12 +36,12 @@ function Projects() {
                 {project.title}
               </Link>
             }
-            style={{ maxWidth: 1200, width: "90vw" }}
+            style={{ maxWidth: 1150, width: "90vw" }}
             key={key}
           >
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div className="flex flex-col content-between sm:flex sm:flex-row sm:justify-between">
               <p>{project.abstract}</p>
-              <div className={"buttons"} style={{ width: "20%" }}>
+              <div className="flex flex-col justify-center w-100 sm:w-40">
                 <Button
                   type="primary"
                   href={project.code}

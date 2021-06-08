@@ -63,23 +63,23 @@ function App() {
                 <img src={logo} alt="Logo"></img>
               </Link>
             </div>
-            <div className="hidden lg:flex flex-row justify-end gap-x-10">
-              <p>
+            <div className="hidden lg:flex flex-row justify-end gap-x-10 h-auto">
+              <p className="m-0">
                 <Link to="/" className="text-white">
                   Home
                 </Link>
               </p>
-              <p>
+              <p className="m-0">
                 <Link to="/about" className="text-white">
                   About
                 </Link>
               </p>
-              <p>
+              <p className="m-0">
                 <Link to="/projects" className="text-white">
                   Projects
                 </Link>
               </p>
-              <p>
+              <p className="m-0">
                 <Link to="/awards" className="text-white">
                   Awards
                 </Link>
